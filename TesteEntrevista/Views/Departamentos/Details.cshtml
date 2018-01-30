@@ -1,0 +1,42 @@
+﻿@model CadFuncionario.Models.Departamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Departamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DEPARTAMENTO_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEPARTAMENTO_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEPARTAMENTO_SALA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEPARTAMENTO_SALA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANDAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANDAR)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DepartamentoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

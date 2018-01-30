@@ -1,0 +1,80 @@
+﻿@model CadFuncionario.Models.Funcionario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento.DEPARTAMENTO_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departamento.DEPARTAMENTO_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUNCIONARIO_EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUNCIONARIO_EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUNCIONARIO_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUNCIONARIO_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUNCIONARIO_CIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUNCIONARIO_CIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUNCIONARIO_ENDERECO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUNCIONARIO_ENDERECO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUNCIONARIO_CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUNCIONARIO_CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUNCIONARIO_TELEFONE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUNCIONARIO_TELEFONE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
